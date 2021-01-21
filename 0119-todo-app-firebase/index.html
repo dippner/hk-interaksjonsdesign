@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Todos (enkel todo-app med firebase)</title>
+
+	<link rel="stylesheet" href="style.css">
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script defer src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+	<script defer src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+	<script defer src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+	     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+	<script defer src="main.js"></script>
+</head>
+<body>
+
+	<!-- vis denne dersom bruker er logget ut -->
+	<div class="sign-in-container" style="display: none">
+		<form id="auth_form">
+			<label for="email">E-post</label>
+			<input id="email" type="email">
+			<label for="password">Passord</label>
+			<input id="password" type="password" required>
+			<button id="log_in_btn">Logg inn</button>
+			<button id="sign_up_btn">Registrer deg</button>
+		</form>
+	</div>
+
+	<!-- vis denne dersom bruker er logget inn -->
+	<div class="todos-container" style="display: none">
+		<button id="log_out_btn">Logg ut</button>
+		<span id="username"></span>
+		<div class="todos">
+		</div>
+		<div class="input-container">
+			<input type="text" id="todo_text"><button id="add_item_btn">Add Item</button>
+		</div>
+	</div>
+
+</body>
+</html>

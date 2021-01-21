@@ -1,0 +1,60 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--main-bg-color: rgb(229, 229, 229);;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: -apple-system, "Helvetica Neue", sans-serif;
+
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.todos {
+	padding: 20px;
+	margin-bottom: 5px;
+	min-width: 50vw;
+	min-height: 60vh;
+	background-color: var(--main-bg-color);
+	border-radius: 5px;
+}
+
+.input-container {
+	display: flex;
+}
+
+.input-container input {
+	flex-grow: 1;
+	align-self: stretch;
+	margin-right: 10px;
+}
+
+.completed + span {
+	text-decoration: line-through;
+}
+
+.sign-in-container {
+	width: 300px;
+	background-color: var(--main-bg-color);
+	padding: 20px 30px;
+	border-radius: 5px;
+}
+
+.sign-in-container form > *:not(button) {
+	display: block;
+	width: 100%;
+	margin-bottom: 10px;
+}
