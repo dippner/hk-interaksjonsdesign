@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio-side</title>
+
+  <!-- Firebase SDK -->
+  <script defer src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.2.3/firebase-storage.js"></script>
+
+  <!-- Flamelink SDK -->
+  <script defer src="//cdn.jsdelivr.net/npm/flamelink@1.0.0-alpha.34/flamelink.js"></script>
+
+  <!-- Våre javascript -->
+  <script defer src="scripts/init-flamelink.js"></script>
+  <script defer src="scripts/eksempel-med-overlay-page.js"></script>
+
+  <!-- Litt styling -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">LOGO</a>
+          </li>
+          <li>
+            <a href="#">Link 1</a>
+          </li>
+          <li>
+            <a href="#">Link 2</a>
+          </li>
+          <li>
+            <a href="#">Link 3</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Denne åpner prosjektene i en overlay</h1>
+      <section>
+        <h2>Mine prosjekter</h2>
+        <div id="projects_container"></div>
+      </section>
+    </main>
+    <footer>
+      Meld på nyhetsbrev
+      <input type="email">
+    </footer>
+    <div id="overlay">
+      <button id="close_overlay">X</button>
+      <div id="overlay_content" class="container"></div>
+    </div>
+  </div>
+</body>
+</html>
